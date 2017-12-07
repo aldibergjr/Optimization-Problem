@@ -25,7 +25,7 @@ public class MetodoHungaro {
 				System.out.print(aux[i][j].getValor()+" ");
 			}
 		}
-		
+		System.out.println();
 		for (int i = 0; i < dupla.length; i++) {
 			System.out.println("Melhores posições: "+dupla[i].i+", "+dupla[i].j);
 		}
@@ -78,7 +78,7 @@ public class MetodoHungaro {
 				
 			}
 		}
-		System.out.println(nriscos);
+		//System.out.println(nriscos);
 		return testeOtm(custo,nriscos);
 	}
 	
@@ -167,13 +167,13 @@ public class MetodoHungaro {
 		for(int j = 0;j<custo.length;j++)
 		{
 		int melhorln = melhorln(linhazeros);
-		System.out.println(melhorln);
+		//System.out.println(melhorln);
 		for (int i = 0; i < custo.length; i++) {
 			if(custo[melhorln][i].getValor()==0 && !custo[melhorln][i].isRiscado()) {
 				linhazeros[melhorln] = linhazeros.length+2;
 				custo = riscarColuna(custo,i);
 				Dupla dupla = new Dupla(melhorln+1,i+1);
-				System.out.println(" done");
+				//System.out.println(" done");
 				pos[j] = dupla;
 				break;
 			}
